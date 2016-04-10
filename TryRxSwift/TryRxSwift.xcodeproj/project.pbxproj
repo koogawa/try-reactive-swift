@@ -21,6 +21,9 @@
 		5C3FDFA11CBA9C81004001C6 /* WebImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5C3FDF951CBA9C80004001C6 /* WebImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5C3FDFA71CBAA23B004001C6 /* AllItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3FDFA61CBAA23B004001C6 /* AllItemViewController.swift */; };
 		5C3FDFA91CBAA302004001C6 /* AllItemViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3FDFA81CBAA302004001C6 /* AllItemViewDataSource.swift */; };
+		5C3FDFAB1CBAA472004001C6 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3FDFAA1CBAA472004001C6 /* API.swift */; };
+		5C3FDFAD1CBAA600004001C6 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3FDFAC1CBAA600004001C6 /* APIConstants.swift */; };
+		5C3FDFAF1CBAA6CB004001C6 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3FDFAE1CBAA6CB004001C6 /* APIRouter.swift */; };
 		5C432A121CBA577700A01789 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C432A111CBA577700A01789 /* AppDelegate.swift */; };
 		5C432A141CBA577700A01789 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C432A131CBA577700A01789 /* ViewController.swift */; };
 		5C432A171CBA577700A01789 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C432A151CBA577700A01789 /* Main.storyboard */; };
@@ -75,6 +78,9 @@
 		5C3FDF951CBA9C80004001C6 /* WebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebImage.framework; path = ../Carthage/Build/iOS/WebImage.framework; sourceTree = "<group>"; };
 		5C3FDFA61CBAA23B004001C6 /* AllItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllItemViewController.swift; sourceTree = "<group>"; };
 		5C3FDFA81CBAA302004001C6 /* AllItemViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllItemViewDataSource.swift; sourceTree = "<group>"; };
+		5C3FDFAA1CBAA472004001C6 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		5C3FDFAC1CBAA600004001C6 /* APIConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		5C3FDFAE1CBAA6CB004001C6 /* APIRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
 		5C432A0E1CBA577700A01789 /* TryRxSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TryRxSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C432A111CBA577700A01789 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5C432A131CBA577700A01789 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -167,6 +173,9 @@
 				5C3FDFA31CBA9CBF004001C6 /* Frameworks */,
 				5C432A111CBA577700A01789 /* AppDelegate.swift */,
 				5C432A131CBA577700A01789 /* ViewController.swift */,
+				5C3FDFAA1CBAA472004001C6 /* API.swift */,
+				5C3FDFAC1CBAA600004001C6 /* APIConstants.swift */,
+				5C3FDFAE1CBAA6CB004001C6 /* APIRouter.swift */,
 				5C3FDFA61CBAA23B004001C6 /* AllItemViewController.swift */,
 				5C3FDFA81CBAA302004001C6 /* AllItemViewDataSource.swift */,
 				5C432A151CBA577700A01789 /* Main.storyboard */,
@@ -351,10 +360,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C3FDFAF1CBAA6CB004001C6 /* APIRouter.swift in Sources */,
 				5C3FDFA91CBAA302004001C6 /* AllItemViewDataSource.swift in Sources */,
 				5C432A141CBA577700A01789 /* ViewController.swift in Sources */,
+				5C3FDFAD1CBAA600004001C6 /* APIConstants.swift in Sources */,
 				5C3FDFA71CBAA23B004001C6 /* AllItemViewController.swift in Sources */,
 				5C432A121CBA577700A01789 /* AppDelegate.swift in Sources */,
+				5C3FDFAB1CBAA472004001C6 /* API.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
