@@ -65,12 +65,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		5C3FDF901CBA9C80004001C6 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
-		5C3FDF911CBA9C80004001C6 /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
-		5C3FDF921CBA9C80004001C6 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
-		5C3FDF931CBA9C80004001C6 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
-		5C3FDF941CBA9C80004001C6 /* RxTests.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTests.framework; path = Carthage/Build/iOS/RxTests.framework; sourceTree = "<group>"; };
-		5C3FDF951CBA9C80004001C6 /* WebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebImage.framework; path = Carthage/Build/iOS/WebImage.framework; sourceTree = "<group>"; };
+		5C3FDF901CBA9C80004001C6 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = ../Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		5C3FDF911CBA9C80004001C6 /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = ../Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
+		5C3FDF921CBA9C80004001C6 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = ../Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		5C3FDF931CBA9C80004001C6 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = ../Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		5C3FDF941CBA9C80004001C6 /* RxTests.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTests.framework; path = ../Carthage/Build/iOS/RxTests.framework; sourceTree = "<group>"; };
+		5C3FDF951CBA9C80004001C6 /* WebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebImage.framework; path = ../Carthage/Build/iOS/WebImage.framework; sourceTree = "<group>"; };
 		5C432A0E1CBA577700A01789 /* TryRxSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TryRxSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C432A111CBA577700A01789 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5C432A131CBA577700A01789 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -117,15 +117,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5C432A051CBA577700A01789 = {
+		5C3FDFA31CBA9CBF004001C6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				5C3FDF901CBA9C80004001C6 /* Alamofire.framework */,
 				5C3FDF911CBA9C80004001C6 /* RxBlocking.framework */,
 				5C3FDF921CBA9C80004001C6 /* RxCocoa.framework */,
 				5C3FDF931CBA9C80004001C6 /* RxSwift.framework */,
-				5C3FDF941CBA9C80004001C6 /* RxTests.framework */,
 				5C3FDF951CBA9C80004001C6 /* WebImage.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5C3FDFA41CBA9CC9004001C6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5C3FDF941CBA9C80004001C6 /* RxTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5C432A051CBA577700A01789 = {
+			isa = PBXGroup;
+			children = (
 				5C432A101CBA577700A01789 /* TryRxSwift */,
 				5C432A251CBA577700A01789 /* TryRxSwiftTests */,
 				5C432A301CBA577700A01789 /* TryRxSwiftUITests */,
@@ -146,6 +160,7 @@
 		5C432A101CBA577700A01789 /* TryRxSwift */ = {
 			isa = PBXGroup;
 			children = (
+				5C3FDFA31CBA9CBF004001C6 /* Frameworks */,
 				5C432A111CBA577700A01789 /* AppDelegate.swift */,
 				5C432A131CBA577700A01789 /* ViewController.swift */,
 				5C432A151CBA577700A01789 /* Main.storyboard */,
@@ -159,6 +174,7 @@
 		5C432A251CBA577700A01789 /* TryRxSwiftTests */ = {
 			isa = PBXGroup;
 			children = (
+				5C3FDFA41CBA9CC9004001C6 /* Frameworks */,
 				5C432A261CBA577700A01789 /* TryRxSwiftTests.swift */,
 				5C432A281CBA577700A01789 /* Info.plist */,
 			);
@@ -185,6 +201,7 @@
 				5C432A0B1CBA577700A01789 /* Frameworks */,
 				5C432A0C1CBA577700A01789 /* Resources */,
 				5C3FDFA21CBA9C81004001C6 /* Embed Frameworks */,
+				5C3FDFA51CBA9DAB004001C6 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -300,6 +317,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5C3FDFA51CBA9DAB004001C6 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxBlocking.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxTests.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/WebImage.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5C432A0A1CBA577700A01789 /* Sources */ = {
