@@ -34,6 +34,10 @@
 		5CDE2CEF1CBBE4630059D7DA /* AllItemRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDE2CEE1CBBE4630059D7DA /* AllItemRequest.swift */; };
 		5CDE2CF11CBBE5100059D7DA /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDE2CF01CBBE5100059D7DA /* Item.swift */; };
 		5CDE2CF31CBBE5C70059D7DA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDE2CF21CBBE5C70059D7DA /* User.swift */; };
+		5CDE2CF51CBBE9080059D7DA /* AllItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDE2CF41CBBE9080059D7DA /* AllItemViewModel.swift */; };
+		5CDE2CF71CBBE9E40059D7DA /* ItemCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDE2CF61CBBE9E40059D7DA /* ItemCellModel.swift */; };
+		5CDE2CFA1CBBEA2F0059D7DA /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDE2CF81CBBEA2F0059D7DA /* ItemCell.swift */; };
+		5CDE2CFB1CBBEA2F0059D7DA /* ItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CDE2CF91CBBEA2F0059D7DA /* ItemCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +104,10 @@
 		5CDE2CEE1CBBE4630059D7DA /* AllItemRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllItemRequest.swift; sourceTree = "<group>"; };
 		5CDE2CF01CBBE5100059D7DA /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		5CDE2CF21CBBE5C70059D7DA /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		5CDE2CF41CBBE9080059D7DA /* AllItemViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllItemViewModel.swift; sourceTree = "<group>"; };
+		5CDE2CF61CBBE9E40059D7DA /* ItemCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCellModel.swift; sourceTree = "<group>"; };
+		5CDE2CF81CBBEA2F0059D7DA /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		5CDE2CF91CBBEA2F0059D7DA /* ItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +195,10 @@
 				5CDE2CF21CBBE5C70059D7DA /* User.swift */,
 				5C3FDFA61CBAA23B004001C6 /* AllItemViewController.swift */,
 				5C3FDFA81CBAA302004001C6 /* AllItemViewDataSource.swift */,
+				5CDE2CF41CBBE9080059D7DA /* AllItemViewModel.swift */,
+				5CDE2CF61CBBE9E40059D7DA /* ItemCellModel.swift */,
+				5CDE2CF81CBBEA2F0059D7DA /* ItemCell.swift */,
+				5CDE2CF91CBBEA2F0059D7DA /* ItemCell.xib */,
 				5C432A151CBA577700A01789 /* Main.storyboard */,
 				5C432A181CBA577700A01789 /* Assets.xcassets */,
 				5C432A1A1CBA577700A01789 /* LaunchScreen.storyboard */,
@@ -320,6 +332,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CDE2CFB1CBBEA2F0059D7DA /* ItemCell.xib in Resources */,
 				5C432A1C1CBA577700A01789 /* LaunchScreen.storyboard in Resources */,
 				5C432A191CBA577700A01789 /* Assets.xcassets in Resources */,
 				5C432A171CBA577700A01789 /* Main.storyboard in Resources */,
@@ -369,11 +382,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CDE2CFA1CBBEA2F0059D7DA /* ItemCell.swift in Sources */,
+				5CDE2CF51CBBE9080059D7DA /* AllItemViewModel.swift in Sources */,
 				5CDE2CEF1CBBE4630059D7DA /* AllItemRequest.swift in Sources */,
 				5CDE2CF11CBBE5100059D7DA /* Item.swift in Sources */,
 				5C3FDFAF1CBAA6CB004001C6 /* APIRouter.swift in Sources */,
 				5C3FDFA91CBAA302004001C6 /* AllItemViewDataSource.swift in Sources */,
 				5C432A141CBA577700A01789 /* ViewController.swift in Sources */,
+				5CDE2CF71CBBE9E40059D7DA /* ItemCellModel.swift in Sources */,
 				5C3FDFAD1CBAA600004001C6 /* APIConstants.swift in Sources */,
 				5C3FDFA71CBAA23B004001C6 /* AllItemViewController.swift in Sources */,
 				5C432A121CBA577700A01789 /* AppDelegate.swift in Sources */,
