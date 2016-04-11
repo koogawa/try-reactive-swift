@@ -15,8 +15,6 @@
 		5C3FDF9B1CBA9C81004001C6 /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5C3FDF921CBA9C80004001C6 /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5C3FDF9C1CBA9C81004001C6 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C3FDF931CBA9C80004001C6 /* RxSwift.framework */; };
 		5C3FDF9D1CBA9C81004001C6 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5C3FDF931CBA9C80004001C6 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5C3FDF9E1CBA9C81004001C6 /* RxTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C3FDF941CBA9C80004001C6 /* RxTests.framework */; };
-		5C3FDF9F1CBA9C81004001C6 /* RxTests.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5C3FDF941CBA9C80004001C6 /* RxTests.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5C3FDFA01CBA9C81004001C6 /* WebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C3FDF951CBA9C80004001C6 /* WebImage.framework */; };
 		5C3FDFA11CBA9C81004001C6 /* WebImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5C3FDF951CBA9C80004001C6 /* WebImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5C3FDFA71CBAA23B004001C6 /* AllItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3FDFA61CBAA23B004001C6 /* AllItemViewController.swift */; };
@@ -74,7 +72,6 @@
 				5C3FDF9B1CBA9C81004001C6 /* RxCocoa.framework in Embed Frameworks */,
 				5C3FDF971CBA9C80004001C6 /* Alamofire.framework in Embed Frameworks */,
 				5C3FDFA11CBA9C81004001C6 /* WebImage.framework in Embed Frameworks */,
-				5C3FDF9F1CBA9C81004001C6 /* RxTests.framework in Embed Frameworks */,
 				5C3FDF991CBA9C80004001C6 /* RxBlocking.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -132,7 +129,6 @@
 				5C3FDF9A1CBA9C81004001C6 /* RxCocoa.framework in Frameworks */,
 				5C3FDF961CBA9C80004001C6 /* Alamofire.framework in Frameworks */,
 				5C3FDFA01CBA9C81004001C6 /* WebImage.framework in Frameworks */,
-				5C3FDF9E1CBA9C81004001C6 /* RxTests.framework in Frameworks */,
 				5C3FDF981CBA9C80004001C6 /* RxBlocking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -385,7 +381,6 @@
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxBlocking.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RxTests.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/WebImage.framework",
 			);
 			outputPaths = (
@@ -558,7 +553,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -575,7 +569,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
