@@ -38,6 +38,12 @@
 		5CDE2CF71CBBE9E40059D7DA /* ItemCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDE2CF61CBBE9E40059D7DA /* ItemCellModel.swift */; };
 		5CDE2CFA1CBBEA2F0059D7DA /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDE2CF81CBBEA2F0059D7DA /* ItemCell.swift */; };
 		5CDE2CFB1CBBEA2F0059D7DA /* ItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CDE2CF91CBBEA2F0059D7DA /* ItemCell.xib */; };
+		5CDE2CFD1CBBF3540059D7DA /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDE2CFC1CBBF3540059D7DA /* UITableView+Extension.swift */; };
+		5CDE2CFF1CBBF37F0059D7DA /* UIScrollView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDE2CFE1CBBF37F0059D7DA /* UIScrollView+Extension.swift */; };
+		5CDE2D011CBBF46C0059D7DA /* UIActivityIndicatorView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDE2D001CBBF46C0059D7DA /* UIActivityIndicatorView+Extension.swift */; };
+		5CDE2D031CBBF4B70059D7DA /* UITableViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDE2D021CBBF4B70059D7DA /* UITableViewController+Extension.swift */; };
+		5CDE2D051CBBF7870059D7DA /* AllItemViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDE2D041CBBF7870059D7DA /* AllItemViewDelegate.swift */; };
+		5CDE2D071CBBF7CB0059D7DA /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CDE2D061CBBF7CB0059D7DA /* SafariServices.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +114,12 @@
 		5CDE2CF61CBBE9E40059D7DA /* ItemCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCellModel.swift; sourceTree = "<group>"; };
 		5CDE2CF81CBBEA2F0059D7DA /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		5CDE2CF91CBBEA2F0059D7DA /* ItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemCell.xib; sourceTree = "<group>"; };
+		5CDE2CFC1CBBF3540059D7DA /* UITableView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		5CDE2CFE1CBBF37F0059D7DA /* UIScrollView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Extension.swift"; sourceTree = "<group>"; };
+		5CDE2D001CBBF46C0059D7DA /* UIActivityIndicatorView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIActivityIndicatorView+Extension.swift"; sourceTree = "<group>"; };
+		5CDE2D021CBBF4B70059D7DA /* UITableViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewController+Extension.swift"; sourceTree = "<group>"; };
+		5CDE2D041CBBF7870059D7DA /* AllItemViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllItemViewDelegate.swift; sourceTree = "<group>"; };
+		5CDE2D061CBBF7CB0059D7DA /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +127,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CDE2D071CBBF7CB0059D7DA /* SafariServices.framework in Frameworks */,
 				5C3FDF9C1CBA9C81004001C6 /* RxSwift.framework in Frameworks */,
 				5C3FDF9A1CBA9C81004001C6 /* RxCocoa.framework in Frameworks */,
 				5C3FDF961CBA9C80004001C6 /* Alamofire.framework in Frameworks */,
@@ -144,6 +157,7 @@
 		5C3FDFA31CBA9CBF004001C6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5CDE2D061CBBF7CB0059D7DA /* SafariServices.framework */,
 				5C3FDF901CBA9C80004001C6 /* Alamofire.framework */,
 				5C3FDF911CBA9C80004001C6 /* RxBlocking.framework */,
 				5C3FDF921CBA9C80004001C6 /* RxCocoa.framework */,
@@ -195,10 +209,15 @@
 				5CDE2CF21CBBE5C70059D7DA /* User.swift */,
 				5C3FDFA61CBAA23B004001C6 /* AllItemViewController.swift */,
 				5C3FDFA81CBAA302004001C6 /* AllItemViewDataSource.swift */,
+				5CDE2D041CBBF7870059D7DA /* AllItemViewDelegate.swift */,
 				5CDE2CF41CBBE9080059D7DA /* AllItemViewModel.swift */,
 				5CDE2CF61CBBE9E40059D7DA /* ItemCellModel.swift */,
 				5CDE2CF81CBBEA2F0059D7DA /* ItemCell.swift */,
 				5CDE2CF91CBBEA2F0059D7DA /* ItemCell.xib */,
+				5CDE2CFC1CBBF3540059D7DA /* UITableView+Extension.swift */,
+				5CDE2CFE1CBBF37F0059D7DA /* UIScrollView+Extension.swift */,
+				5CDE2D001CBBF46C0059D7DA /* UIActivityIndicatorView+Extension.swift */,
+				5CDE2D021CBBF4B70059D7DA /* UITableViewController+Extension.swift */,
 				5C432A151CBA577700A01789 /* Main.storyboard */,
 				5C432A181CBA577700A01789 /* Assets.xcassets */,
 				5C432A1A1CBA577700A01789 /* LaunchScreen.storyboard */,
@@ -386,13 +405,18 @@
 				5CDE2CF51CBBE9080059D7DA /* AllItemViewModel.swift in Sources */,
 				5CDE2CEF1CBBE4630059D7DA /* AllItemRequest.swift in Sources */,
 				5CDE2CF11CBBE5100059D7DA /* Item.swift in Sources */,
+				5CDE2CFF1CBBF37F0059D7DA /* UIScrollView+Extension.swift in Sources */,
 				5C3FDFAF1CBAA6CB004001C6 /* APIRouter.swift in Sources */,
+				5CDE2D051CBBF7870059D7DA /* AllItemViewDelegate.swift in Sources */,
 				5C3FDFA91CBAA302004001C6 /* AllItemViewDataSource.swift in Sources */,
 				5C432A141CBA577700A01789 /* ViewController.swift in Sources */,
 				5CDE2CF71CBBE9E40059D7DA /* ItemCellModel.swift in Sources */,
 				5C3FDFAD1CBAA600004001C6 /* APIConstants.swift in Sources */,
+				5CDE2CFD1CBBF3540059D7DA /* UITableView+Extension.swift in Sources */,
 				5C3FDFA71CBAA23B004001C6 /* AllItemViewController.swift in Sources */,
 				5C432A121CBA577700A01789 /* AppDelegate.swift in Sources */,
+				5CDE2D011CBBF46C0059D7DA /* UIActivityIndicatorView+Extension.swift in Sources */,
+				5CDE2D031CBBF4B70059D7DA /* UITableViewController+Extension.swift in Sources */,
 				5CDE2CF31CBBE5C70059D7DA /* User.swift in Sources */,
 				5C3FDFAB1CBAA472004001C6 /* API.swift in Sources */,
 			);
@@ -534,12 +558,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = TryRxSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.naoto.yamaguchi.TryRxSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -549,12 +575,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = TryRxSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.naoto.yamaguchi.TryRxSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
