@@ -14,6 +14,12 @@
 		5C9F05DA1CBD42150044D9BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C9F05D81CBD42150044D9BF /* LaunchScreen.storyboard */; };
 		5C9F05E51CBD42150044D9BF /* TrySwiftBondTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9F05E41CBD42150044D9BF /* TrySwiftBondTests.swift */; };
 		5C9F05F01CBD42150044D9BF /* TrySwiftBondUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9F05EF1CBD42150044D9BF /* TrySwiftBondUITests.swift */; };
+		5C9F060A1CBD48E20044D9BF /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C9F06071CBD48E20044D9BF /* Alamofire.framework */; };
+		5C9F060B1CBD48E20044D9BF /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5C9F06071CBD48E20044D9BF /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5C9F060C1CBD48E20044D9BF /* Bond.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C9F06081CBD48E20044D9BF /* Bond.framework */; };
+		5C9F060D1CBD48E20044D9BF /* Bond.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5C9F06081CBD48E20044D9BF /* Bond.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5C9F060E1CBD48E20044D9BF /* WebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C9F06091CBD48E20044D9BF /* WebImage.framework */; };
+		5C9F060F1CBD48E20044D9BF /* WebImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5C9F06091CBD48E20044D9BF /* WebImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +39,22 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		5C9F06101CBD48E20044D9BF /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				5C9F060F1CBD48E20044D9BF /* WebImage.framework in Embed Frameworks */,
+				5C9F060B1CBD48E20044D9BF /* Alamofire.framework in Embed Frameworks */,
+				5C9F060D1CBD48E20044D9BF /* Bond.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		5C9F05CC1CBD42150044D9BF /* TrySwiftBond.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrySwiftBond.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C9F05CF1CBD42150044D9BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +69,9 @@
 		5C9F05EB1CBD42150044D9BF /* TrySwiftBondUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrySwiftBondUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C9F05EF1CBD42150044D9BF /* TrySwiftBondUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrySwiftBondUITests.swift; sourceTree = "<group>"; };
 		5C9F05F11CBD42150044D9BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C9F06071CBD48E20044D9BF /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = ../Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		5C9F06081CBD48E20044D9BF /* Bond.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bond.framework; path = ../Carthage/Build/iOS/Bond.framework; sourceTree = "<group>"; };
+		5C9F06091CBD48E20044D9BF /* WebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebImage.framework; path = ../Carthage/Build/iOS/WebImage.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +79,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C9F060E1CBD48E20044D9BF /* WebImage.framework in Frameworks */,
+				5C9F060A1CBD48E20044D9BF /* Alamofire.framework in Frameworks */,
+				5C9F060C1CBD48E20044D9BF /* Bond.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +125,7 @@
 		5C9F05CE1CBD42150044D9BF /* TrySwiftBond */ = {
 			isa = PBXGroup;
 			children = (
+				5C9F06111CBD49610044D9BF /* Frameworks */,
 				5C9F05CF1CBD42150044D9BF /* AppDelegate.swift */,
 				5C9F05D11CBD42150044D9BF /* ViewController.swift */,
 				5C9F05D31CBD42150044D9BF /* Main.storyboard */,
@@ -125,6 +154,16 @@
 			path = TrySwiftBondUITests;
 			sourceTree = "<group>";
 		};
+		5C9F06111CBD49610044D9BF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5C9F06071CBD48E20044D9BF /* Alamofire.framework */,
+				5C9F06081CBD48E20044D9BF /* Bond.framework */,
+				5C9F06091CBD48E20044D9BF /* WebImage.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,6 +174,8 @@
 				5C9F05C81CBD42150044D9BF /* Sources */,
 				5C9F05C91CBD42150044D9BF /* Frameworks */,
 				5C9F05CA1CBD42150044D9BF /* Resources */,
+				5C9F06101CBD48E20044D9BF /* Embed Frameworks */,
+				5C9F06121CBD49C70044D9BF /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -250,6 +291,25 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5C9F06121CBD49C70044D9BF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework ",
+				"$(SRCROOT)/Carthage/Build/iOS/Bond.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/WebImage.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5C9F05C81CBD42150044D9BF /* Sources */ = {
@@ -399,6 +459,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = TrySwiftBond/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.naoto.yamaguchi.TrySwiftBond;
@@ -410,6 +474,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = TrySwiftBond/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.naoto.yamaguchi.TrySwiftBond;
@@ -482,6 +550,7 @@
 				5C9F05F61CBD42150044D9BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5C9F05F71CBD42150044D9BF /* Build configuration list for PBXNativeTarget "TrySwiftBondTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +559,7 @@
 				5C9F05F91CBD42150044D9BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5C9F05FA1CBD42150044D9BF /* Build configuration list for PBXNativeTarget "TrySwiftBondUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +568,7 @@
 				5C9F05FC1CBD42150044D9BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
