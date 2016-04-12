@@ -7,17 +7,31 @@
 //
 
 import UIKit
+import SafariServices
+import RxSwift
 
 class AllItemViewController: UITableViewController {
-
+    
+    // MARK: - Property
+    
+    @IBOutlet weak var pullToRefresh: UIRefreshControl!
+    var centerIndicator = UIActivityIndicatorView()
+    var footerIndicator = UIActivityIndicatorView()
+    
+    var viewModel = AllItemViewModel()
+    var dataSource = AllItemViewDataSource()
+    var delegate = AllItemViewDelegate()
+    let disposeBag = DisposeBag()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        self.configureBackgroundColor()
+        self.configureTableView()
+        self.centerIndicator = self.configureCenterIndicator
+        self.footerIndicator = self.configureFooterIndicator
+        self.itemRequest()
+        self.bind()
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,71 +39,75 @@ class AllItemViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    // MARK: - Table view data source
-
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+    // MARK: - Private
+    
+    private func configureTableView() {
+        self.tableView.backgroundColor = UIColor.clearColor()
+        self.tableView.delegate = self.delegate
+        self.tableView.rowHeight = 110
+        self.tableView.estimatedRowHeight = 110
+        self.tableView.registerCell(nibName: "ItemCell", forCellReuseIdentifier: "itemCell")
     }
-
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+    
+    private func itemRequest() {
+        self.viewModel.firstRequest()
     }
-
-    /*
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-
-        // Configure the cell...
-
-        return cell
+    
+    func bind() {
+        
+        self.viewModel.firstLoading
+            .asDriver()
+            .drive(self.centerIndicator.rx_animating)
+            .addDisposableTo(self.disposeBag)
+        
+        self.pullToRefresh
+            .rx_controlEvent(.ValueChanged)
+            .subscribe { [weak self] (_) -> Void in
+                self?.viewModel.refreshRequest()
+            }
+            .addDisposableTo(self.disposeBag)
+        
+        self.viewModel.refreshLoading
+            .asDriver()
+            .drive(self.pullToRefresh.rx_refreshing)
+            .addDisposableTo(self.disposeBag)
+        
+        self.rx_reachBottom
+            .filter { () -> Bool in
+                self.footerIndicator.isAnimating() == false
+            }
+            .subscribe { [weak self] (event) -> Void in
+                print("nextPageRequest")
+                self?.viewModel.nextPageRequest()
+            }
+            .addDisposableTo(self.disposeBag)
+        
+        self.viewModel.nextPageLoading
+            .asDriver()
+            .drive(self.footerIndicator.rx_animating)
+            .addDisposableTo(self.disposeBag)
+        
+        self.viewModel.items
+            .asDriver()
+            .drive (
+                self.tableView.rx_itemsWithDataSource(self.dataSource)
+            )
+            .addDisposableTo(self.disposeBag)
+        
+        self.tableView.rx_itemSelected
+            .bindNext { [weak self] (indexPath) -> Void in
+                let item = self?.viewModel.items.value[indexPath.row]
+                
+                if let urlString = item?.url, url = NSURL(string: urlString) {
+                    let safariVC = SFSafariViewController(URL: url)
+                    self?.presentViewController(
+                        safariVC,
+                        animated: true,
+                        completion: nil
+                    )
+                }
+                
+            }
+            .addDisposableTo(self.disposeBag)
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

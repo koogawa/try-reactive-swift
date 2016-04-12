@@ -41,6 +41,7 @@
 		5C2E49501CBD2F79001D128F /* UIScrollView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E494F1CBD2F79001D128F /* UIScrollView+Extension.swift */; };
 		5C2E49521CBD2F83001D128F /* UIActivityIndicatorView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E49511CBD2F83001D128F /* UIActivityIndicatorView+Extension.swift */; };
 		5C2E49541CBD2F91001D128F /* UITableViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E49531CBD2F91001D128F /* UITableViewController+Extension.swift */; };
+		5C2E49561CBD31D2001D128F /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C2E49551CBD31D2001D128F /* SafariServices.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +115,7 @@
 		5C2E494F1CBD2F79001D128F /* UIScrollView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Extension.swift"; sourceTree = "<group>"; };
 		5C2E49511CBD2F83001D128F /* UIActivityIndicatorView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIActivityIndicatorView+Extension.swift"; sourceTree = "<group>"; };
 		5C2E49531CBD2F91001D128F /* UITableViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewController+Extension.swift"; sourceTree = "<group>"; };
+		5C2E49551CBD31D2001D128F /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C2E49561CBD31D2001D128F /* SafariServices.framework in Frameworks */,
 				5C2E492C1CBD2D3B001D128F /* RxSwift.framework in Frameworks */,
 				5C2E492E1CBD2D3B001D128F /* WebImage.framework in Frameworks */,
 				5C2E492A1CBD2D3B001D128F /* RxCocoa.framework in Frameworks */,
@@ -218,6 +221,7 @@
 		5C2E49311CBD2D50001D128F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5C2E49551CBD31D2001D128F /* SafariServices.framework */,
 				5C2E49211CBD2D3B001D128F /* Alamofire.framework */,
 				5C2E49221CBD2D3B001D128F /* RxBlocking.framework */,
 				5C2E49231CBD2D3B001D128F /* RxCocoa.framework */,
