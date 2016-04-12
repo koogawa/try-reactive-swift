@@ -14,6 +14,16 @@
 		5C2E48DE1CBD1EA9001D128F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C2E48DC1CBD1EA9001D128F /* LaunchScreen.storyboard */; };
 		5C2E48E91CBD1EA9001D128F /* TryRxSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E48E81CBD1EA9001D128F /* TryRxSwiftTests.swift */; };
 		5C2E48F41CBD1EA9001D128F /* TryRxSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E48F31CBD1EA9001D128F /* TryRxSwiftUITests.swift */; };
+		5C2E49261CBD2D3B001D128F /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C2E49211CBD2D3B001D128F /* Alamofire.framework */; };
+		5C2E49271CBD2D3B001D128F /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5C2E49211CBD2D3B001D128F /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5C2E49281CBD2D3B001D128F /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C2E49221CBD2D3B001D128F /* RxBlocking.framework */; };
+		5C2E49291CBD2D3B001D128F /* RxBlocking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5C2E49221CBD2D3B001D128F /* RxBlocking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5C2E492A1CBD2D3B001D128F /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C2E49231CBD2D3B001D128F /* RxCocoa.framework */; };
+		5C2E492B1CBD2D3B001D128F /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5C2E49231CBD2D3B001D128F /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5C2E492C1CBD2D3B001D128F /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C2E49241CBD2D3B001D128F /* RxSwift.framework */; };
+		5C2E492D1CBD2D3B001D128F /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5C2E49241CBD2D3B001D128F /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5C2E492E1CBD2D3B001D128F /* WebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C2E49251CBD2D3B001D128F /* WebImage.framework */; };
+		5C2E492F1CBD2D3B001D128F /* WebImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5C2E49251CBD2D3B001D128F /* WebImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +43,24 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		5C2E49301CBD2D3B001D128F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				5C2E492D1CBD2D3B001D128F /* RxSwift.framework in Embed Frameworks */,
+				5C2E492F1CBD2D3B001D128F /* WebImage.framework in Embed Frameworks */,
+				5C2E492B1CBD2D3B001D128F /* RxCocoa.framework in Embed Frameworks */,
+				5C2E49271CBD2D3B001D128F /* Alamofire.framework in Embed Frameworks */,
+				5C2E49291CBD2D3B001D128F /* RxBlocking.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		5C2E48D01CBD1EA9001D128F /* TryRxSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TryRxSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C2E48D31CBD1EA9001D128F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +75,11 @@
 		5C2E48EF1CBD1EA9001D128F /* TryRxSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TryRxSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C2E48F31CBD1EA9001D128F /* TryRxSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TryRxSwiftUITests.swift; sourceTree = "<group>"; };
 		5C2E48F51CBD1EA9001D128F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C2E49211CBD2D3B001D128F /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = ../Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		5C2E49221CBD2D3B001D128F /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = ../Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
+		5C2E49231CBD2D3B001D128F /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = ../Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		5C2E49241CBD2D3B001D128F /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = ../Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		5C2E49251CBD2D3B001D128F /* WebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebImage.framework; path = ../Carthage/Build/iOS/WebImage.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +87,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C2E492C1CBD2D3B001D128F /* RxSwift.framework in Frameworks */,
+				5C2E492E1CBD2D3B001D128F /* WebImage.framework in Frameworks */,
+				5C2E492A1CBD2D3B001D128F /* RxCocoa.framework in Frameworks */,
+				5C2E49261CBD2D3B001D128F /* Alamofire.framework in Frameworks */,
+				5C2E49281CBD2D3B001D128F /* RxBlocking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +135,7 @@
 		5C2E48D21CBD1EA9001D128F /* TryRxSwift */ = {
 			isa = PBXGroup;
 			children = (
+				5C2E49311CBD2D50001D128F /* Frameworks */,
 				5C2E48D31CBD1EA9001D128F /* AppDelegate.swift */,
 				5C2E48D51CBD1EA9001D128F /* ViewController.swift */,
 				5C2E48D71CBD1EA9001D128F /* Main.storyboard */,
@@ -125,6 +164,18 @@
 			path = TryRxSwiftUITests;
 			sourceTree = "<group>";
 		};
+		5C2E49311CBD2D50001D128F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5C2E49211CBD2D3B001D128F /* Alamofire.framework */,
+				5C2E49221CBD2D3B001D128F /* RxBlocking.framework */,
+				5C2E49231CBD2D3B001D128F /* RxCocoa.framework */,
+				5C2E49241CBD2D3B001D128F /* RxSwift.framework */,
+				5C2E49251CBD2D3B001D128F /* WebImage.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,6 +186,7 @@
 				5C2E48CC1CBD1EA9001D128F /* Sources */,
 				5C2E48CD1CBD1EA9001D128F /* Frameworks */,
 				5C2E48CE1CBD1EA9001D128F /* Resources */,
+				5C2E49301CBD2D3B001D128F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -399,6 +451,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = TryRxSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.naoto.yamaguchi.TryRxSwift;
@@ -410,6 +466,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = TryRxSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.naoto.yamaguchi.TryRxSwift;
@@ -482,6 +542,7 @@
 				5C2E48FA1CBD1EA9001D128F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5C2E48FB1CBD1EA9001D128F /* Build configuration list for PBXNativeTarget "TryRxSwiftTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +551,7 @@
 				5C2E48FD1CBD1EA9001D128F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5C2E48FE1CBD1EA9001D128F /* Build configuration list for PBXNativeTarget "TryRxSwiftUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +560,7 @@
 				5C2E49001CBD1EA9001D128F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
