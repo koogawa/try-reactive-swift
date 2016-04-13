@@ -19,7 +19,7 @@ extension AllItemViewController {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
         let item = self.viewModel.items.array[indexPath.row]
-        if let url = NSURL(string: item.url.value) {
+        if let url = NSURL(string: item.url) {
             let safariVC = SFSafariViewController(URL: url)
             self.presentViewController(
                 safariVC,

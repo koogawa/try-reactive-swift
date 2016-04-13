@@ -13,19 +13,19 @@ public class User {
     
     // MARK: - Property
     
-    public let id: Observable<String>
-    public let profileImageURL: Observable<String>
+    public let id: String
+    public let profileImageURL: String
     
     // MARK: - LifeCycle
     
     init() {
-        self.id = Observable("")
-        self.profileImageURL = Observable("")
+        self.id = ""
+        self.profileImageURL = ""
     }
     
     init(dictionary: [String: AnyObject]) {
-        self.id = Observable(dictionary["id"] as? String ?? "")
-        self.profileImageURL = Observable(dictionary["profile_image_url"] as? String ?? "")
+        self.id = dictionary["id"] as? String ?? ""
+        self.profileImageURL = dictionary["profile_image_url"] as? String ?? ""
     }
     
 }

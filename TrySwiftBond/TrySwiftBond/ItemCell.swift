@@ -8,6 +8,7 @@
 
 import UIKit
 import Bond
+import WebImage
 
 class ItemCell: UITableViewCell {
     
@@ -26,13 +27,30 @@ class ItemCell: UITableViewCell {
     
     override func prepareForReuse() {
         super.prepareForReuse()
-        bnd_bag.dispose()
+        
+        self.bnd_bag.dispose()
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    // MARK: - Public
+    
+    func configureCell(item item: Item) {
+        
+        if let url = NSURL(string: item.user.profileImageURL) {
+            self.userImageView.sd_setImageWithURL(
+                url,
+                placeholderImage: nil,
+                options: .RetryFailed
+            )
+        }
+        
+        self.userIDLabel.text = item.user.id
+        self.itemTitleLabel.text = item.title
     }
     
 }

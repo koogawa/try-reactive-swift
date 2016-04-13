@@ -63,7 +63,7 @@ class AllItemViewController: UITableViewController {
             .filter { $0 == UIControlEvents.ValueChanged }
             .observe { [weak self] (_) -> Void in
                 self?.viewModel.refreshRequest()
-        }
+            }
         
         self.viewModel.refreshLoading
             .filter{ $0 == false }
@@ -71,15 +71,13 @@ class AllItemViewController: UITableViewController {
                 dispatch_async(dispatch_get_main_queue(), {
                     self.pullToRefresh.endRefreshing()
                 })
-        }
+            }
         
         self.items = ObservableArray([self.viewModel.items])
         self.items.bindTo(self.tableView, proxyDataSource: self.dataSource) { (indexPath, items, tableView) in
-            print(indexPath)
             let cell = tableView.dequeueReusableCellWithIdentifier("itemCell", forIndexPath: indexPath) as! ItemCell
             let item = items[indexPath.section][indexPath.row]
-            item.user.id.bindTo(cell.userIDLabel.bnd_text).disposeIn(cell.bnd_bag)
-            item.title.bindTo(cell.itemTitleLabel.bnd_text).disposeIn(cell.bnd_bag)
+            cell.configureCell(item: item)
             return cell
         }
         
